@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #222639;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.container .card{
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #c7c6c6;
+    position: relative;
+    transition: .5s;
+}
+.container .card::after{
+    content: '';
+    position: absolute;
+    top:  0;
+    left: 0;
+    background: rgba(85, 180, 221, 0.071);
+    filter: blur(1.5px);
+    height: 100%;
+    width: 100%;
+}
+.container .card ion-icon{
+    font-size: 5rem;
+    margin-bottom: 7rem;
+    
+}
+.container .card span{
+    font-size: 1.5rem;
+    background:  rgba(121, 196, 228, 0.308);
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.container .card:nth-child(1){
+    transform: rotate(-10deg) translateX(80px);
+    z-index: 1;
+
+}
+.container .card:nth-child(2){
+    transform: rotate(5deg);
+    z-index: 4;
+}
+.container .card:nth-child(3){
+    transform: rotate(20deg) translateX(-60px);
+    z-index: 5;
+}
+.container .card:nth-child(4){
+    transform: rotate(-20deg) translateX(-120px);
+    z-index: 8;
+}
+
+.container:hover .card{
+    transform: rotate(0) translateX(0);
+}
